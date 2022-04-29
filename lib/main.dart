@@ -73,7 +73,17 @@ class _MainPageState extends State<MainPage> {
                             ),
                           );
                         },
-                        child: const Text('Поиграем?'))
+                        child: const Text('Поиграем?')),
+                    TextButton(
+                        onPressed: () {
+                          VKBridge.instance.flashSetLevel(1);
+                        },
+                        child: Text('ВКЛ')),
+                    TextButton(
+                        onPressed: () {
+                          VKBridge.instance.flashSetLevel(0);
+                        },
+                        child: Text('ВЫКЛ')),
                   ],
                 );
               }
